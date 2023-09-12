@@ -1,0 +1,79 @@
+WindowManager:
+    KentrisMenu:
+        id: KentrisMenu
+    HelpMenu:
+    GameBoard:
+        id: GameBoard
+
+<KentrisMenu>:
+    name: "Main"
+
+    GridLayout:
+        rows: 2
+        size_hint_y: 0.1
+
+        GridLayout
+            cols: 2
+            Button:
+                id: play_button
+                text: "Play"
+                size_hint: 0.2,0.1
+                pos_hint: {'left': 1}
+                on_press: root.parent.start_clock()
+                on_release:
+                    app.root.current = "GameBoard"
+
+            Button:
+                text: "Help"
+                size_hint: 0.2,0.1
+                pos_hint:{'right': 1}
+                on_release:
+                    app.root.current = "Help"
+    BoxLayout:
+        Image:
+            source: 'kentris.png'
+
+
+<HelpMenu>
+    name: "Help"
+    BoxLayout:
+        Image:
+            source: 'pg1help.png'
+    Button:
+        text: "Back"
+        size_hint: 0.2,0.1
+        pos_hint:{'right': 1}
+        on_release:
+            app.root.current = "Main"
+
+<GameBoard>
+    name: "GameBoard"
+
+<TetrisGameBoard>:
+    cols: 10
+    rows: 20
+    spacing: 2
+    padding: 2
+
+
+<Tetris>: # calls class tetris
+
+<GameBoardPanel>
+    canvas:
+        Color:
+            rgb: self.red, self.green, self.blue
+        Rectangle:
+            pos: self.pos
+            size: self.size
+
+
+<Block>:
+    canvas:
+        Color:
+            rgb: self.red, self.green, self.blue
+        Rectangle:
+            pos: self.pos
+            size: self.size
+
+
+
