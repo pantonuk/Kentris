@@ -7,21 +7,19 @@ from kivy.uix.boxlayout import BoxLayout
 from kivy.uix.image import Image
 from kivy.uix.button import Button
 
-from team01.main.Block import Block
+from main.Block import Block
 from kivy.uix.screenmanager import ScreenManager, Screen
 from kivy.clock import Clock
 
 from kivy.properties import *
-from team01.main.Tetromino import Tetromino
-from team01.main.TetrominoI import TetrominoI
-from team01.main.TetrominoO import TetrominoO
-from team01.main.TetrominoT import TetrominoT
-from team01.main.TetrominoS import TetrominoS
-from team01.main.TetrominoZ import TetrominoZ
-from team01.main.TetrominoJ import TetrominoJ
-from team01.main.TetrominoL import TetrominoL
-
-#from team01.TetrominoI import tetrominoI
+from main.Tetromino import Tetromino
+from main.TetrominoI import TetrominoI
+from main.TetrominoO import TetrominoO
+from main.TetrominoT import TetrominoT
+from main.TetrominoS import TetrominoS
+from main.TetrominoZ import TetrominoZ
+from main.TetrominoJ import TetrominoJ
+from main.TetrominoL import TetrominoL
 from kivy.core.window import Window
 
 import random
