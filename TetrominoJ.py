@@ -1,4 +1,4 @@
-from team01.main.Tetromino import Tetromino
+from main.Tetromino import Tetromino
 from enum import Enum
 
 
