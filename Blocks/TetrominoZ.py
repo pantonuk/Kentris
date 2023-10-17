@@ -1,4 +1,4 @@
-from main.Tetromino import Tetromino
+from Blocks.Tetromino import Tetromino
 from enum import Enum
 
 class rotateState(Enum):
@@ -26,8 +26,8 @@ class TetrominoZ(Tetromino):
 
         if self.RotationPosition == rotateState.State1:
             val = []
-            val.append((self.TetrominoLocation[0])[0])  # self.TetrominoLocation[1] gets the position 1 in the list of 4 blocks in the tetromino The [0] and [1] makes a deep copy of the x,y location of the blocks row and columns
-            val.append((self.TetrominoLocation[0])[1])
+            val.append((self.TetrominoLocation[0])[0])  # self.TetrominoLocation[1] gets the position 1 in the list of 4 blocks in the tetromino The [0] and [1] makes a deep copy of
+            val.append((self.TetrominoLocation[0])[1])  # the x,y location of the blocks row and columns
             val[0] = val[0] + 1
             val[1] = val[1]
             self.TetrominoLocation[1] = val

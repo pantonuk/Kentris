@@ -1,4 +1,4 @@
-from main.Tetromino import Tetromino
+from Blocks.Tetromino import Tetromino
 from enum import Enum
 
 

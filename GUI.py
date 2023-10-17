@@ -7,19 +7,19 @@ from kivy.uix.boxlayout import BoxLayout
 from kivy.uix.image import Image
 from kivy.uix.button import Button
 
-from main.Block import Block
+from Block import Block
 from kivy.uix.screenmanager import ScreenManager, Screen
 from kivy.clock import Clock
 
 from kivy.properties import *
-from main.Tetromino import Tetromino
-from main.TetrominoI import TetrominoI
-from main.TetrominoO import TetrominoO
-from main.TetrominoT import TetrominoT
-from main.TetrominoS import TetrominoS
-from main.TetrominoZ import TetrominoZ
-from main.TetrominoJ import TetrominoJ
-from main.TetrominoL import TetrominoL
+from Blocks.Tetromino import Tetromino
+from Blocks.TetrominoI import TetrominoI
+from Blocks.TetrominoO import TetrominoO
+from Blocks.TetrominoT import TetrominoT
+from Blocks.TetrominoS import TetrominoS
+from Blocks.TetrominoZ import TetrominoZ
+from Blocks.TetrominoJ import TetrominoJ
+from Blocks.TetrominoL import TetrominoL
 from kivy.core.window import Window
 
 import random
@@ -362,25 +362,25 @@ class GameBoard(Screen):  # TODO REFACTOR TO NEW NAME TO PLAY OR SOMETHING TO MA
     def createNextTetromino(self, NextTetromino):
 
         if self.NextTetromino == 1:
-            tetrimino1 = Image(source="TetrominoO.png")
+            tetrimino1 = Image(source="Blocks/TetrominoO.png")
             self.next_piece_image(self.NextTetromino, tetrimino1)
         elif self.NextTetromino == 2:
-            tetrimino2 = Image(source="TetrominoI.png")
+            tetrimino2 = Image(source="Blocks/TetrominoI.png")
             self.next_piece_image(self.NextTetromino, tetrimino2)
         elif self.NextTetromino == 3:
-            tetrimino3 = Image(source="TetrominoT.png")
+            tetrimino3 = Image(source="Blocks/TetrominoT.png")
             self.next_piece_image(self.NextTetromino, tetrimino3)
         elif self.NextTetromino == 4:
-            tetrimino4 = Image(source="TetrominoS.png")
+            tetrimino4 = Image(source="Blocks/TetrominoS.png")
             self.next_piece_image(self.NextTetromino, tetrimino4)
         elif self.NextTetromino == 5:
-            tetrimino5 = Image(source="TetrominoZ.png")
+            tetrimino5 = Image(source="Blocks/TetrominoZ.png")
             self.next_piece_image(self.NextTetromino, tetrimino5)
         elif self.NextTetromino == 6:
-            tetrimino6 = Image(source="TetrominoJ.png")
+            tetrimino6 = Image(source="Blocks/TetrominoJ.png")
             self.next_piece_image(self.NextTetromino, tetrimino6)
         elif self.NextTetromino == 7:
-            tetrimino7 = Image(source="TetrominoL.png")
+            tetrimino7 = Image(source="Blocks/TetrominoL.png")
             self.next_piece_image(self.NextTetromino, tetrimino7)
 
     def create_next_live_tetromino(self, rand):
